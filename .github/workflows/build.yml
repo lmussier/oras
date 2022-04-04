@@ -26,3 +26,9 @@ jobs:
         run: make build-linux-arm32
       - name: Check version
         run: bin/linux/arm32/oras version
+      - name: Deploy
+        uses: actions/upload-artifact@v3
+        with:
+          name: oras
+          path: bin/linux/arm32/oras
+          if-no-files-found: error
