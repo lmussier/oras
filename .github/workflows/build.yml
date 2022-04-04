@@ -17,6 +17,6 @@ jobs:
         with:
           go-version: '1.16.5'
       - name: Build CLI
-        run: make build-linux
+        run: make build-linux-arm32
       - name: Check version
         run: bin/linux/amd64/oras version
